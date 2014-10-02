@@ -4,6 +4,8 @@ class CreateComments < ActiveRecord::Migration
       t.string :body
       t.references :movie_id, index: true
       t.references :user_id, index: true
+
+      t.timestamps
     end
   end
 end

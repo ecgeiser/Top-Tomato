@@ -3,6 +3,8 @@ class CreateFavorites < ActiveRecord::Migration
     create_table :favorites do |t|
     	t.references :user_id, index: true
     	t.references :movie_id, index: true
+
+    	t.timestamps
     end
   end
 end
