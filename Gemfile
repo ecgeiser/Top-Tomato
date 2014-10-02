@@ -1,8 +1,12 @@
 source 'https://rubygems.org'
+# Grid Layout for our Views
+gem 'foundation-rails'
+# Hides Api Key
 gem 'figaro'
+# Able to send notfications to Cell
 gem 'twilio-ruby', :require => false
+# Cron Job
 gem 'whenever'
-
 # Sets up User Authentication and Login
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
