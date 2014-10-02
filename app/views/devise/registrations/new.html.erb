@@ -12,6 +12,13 @@
   <div><%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 
+  <div><%= f.label :cell, 'Cell Phone Number' %><br />
+  	<%= f.phone_field :cell, :placeholder => "ex. 1234567890" ,autocomplete: "off" %>
+  </div>
+
+  <div><%= f.label :zip, 'Zip Code' %><br />
+  	<%= f.number_field :zip, :placeholder => "ex. 12345", autocomplete: "off" %></div>
+
   <div><%= f.submit "Sign up" %></div>
 <% end %>
 

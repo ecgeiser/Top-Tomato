@@ -19,6 +19,13 @@
   <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %></div>
 
+  <div><%= f.label :cell, 'Cell Phone Number' %><br />
+    <%= f.phone_field :cell, :placeholder => "ex. 1234567890" ,autocomplete: "off" %>
+  </div>
+
+  <div><%= f.label :zip, 'Zip Code' %><br />
+    <%= f.number_field :zip, :placeholder => "ex. 12345", autocomplete: "off" %></div>
+
   <div><%= f.submit "Update" %></div>
 <% end %>
 
