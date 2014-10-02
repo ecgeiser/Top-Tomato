@@ -1,0 +1,11 @@
+<div id='collect_list'>
+	<p>Movie List</p>
+		<% @movies.each do |m| %>
+			<ul>
+				<li><%= m.title  %></li>
+				<li><%= m.release_date %></li>
+	
+
+			</ul>
+		<% end %>
+</div>
