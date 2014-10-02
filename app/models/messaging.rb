@@ -5,9 +5,6 @@ def find_favorites
 end
 
 def send_message 
-
-  require 'rubygems'          
-  require 'twilio-ruby'
    
   # Get your Account Sid and Auth Token from twilio.com/user/account
   account_sid = 'AC7326a501d955b4b8090071e6d4d7ea1f'
