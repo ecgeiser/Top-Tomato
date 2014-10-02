@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
-gem 'twilio-ruby'
-gem 'whenever', :require => false
+gem 'figaro'
+gem 'twilio-ruby', :require => false
+gem 'whenever'
+
 # Sets up User Authentication and Login
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
