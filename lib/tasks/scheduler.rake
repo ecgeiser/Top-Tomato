@@ -13,15 +13,16 @@ namespace :scheduler do
     movies = result["movies"]
 
     movies.each do |movie|
-    	if movie["ratings"]["critics_score"] > 90
+    	if movie["ratings"]["critics_score"] > 80
     		title = movie["title"]
             score = movie["ratings"]["critics_score"]
             release = movie["release_dates"]["theater"]
-            Movie.new(
+            film = Movie.new(
     			:title => title,
     			:critics_score => score,
     			:release_date => release
     		)
+            film.save
     	end
     end
 	end
