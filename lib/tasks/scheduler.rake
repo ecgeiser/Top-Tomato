@@ -14,10 +14,13 @@ namespace :scheduler do
 
     movies.each do |movie|
     	if movie["ratings"]["critics_score"] > 90
-    		Movie.new(
-    			:title => movie["title"],
-    			:critics_score => movie["ratings"]["critics_score"],
-    			:release_date => movie["release_dates"]["theater"]
+    		title = movie["title"]
+            score = movie["ratings"]["critics_score"]
+            release = movie["release_dates"]["theater"]
+            Movie.new(
+    			:title => title,
+    			:critics_score => score,
+    			:release_date => release
     		)
     	end
     end
