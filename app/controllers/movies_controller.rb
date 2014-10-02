@@ -4,7 +4,7 @@ class MoviesController < ApplicationController
 
 	def index
 	  @movies = Movie.all
-	  @top_movies = Movie.where("critics_score >= '90'").order('release_date DESC').where(created_at: (Time.now - 7.day)..Time.now)
+	  # @top_movies = Movie.where("critics_score >= '90'").order('release_date DESC').where(created_at: (Time.now - 7.day)..Time.now)
 	end
 
 	def new

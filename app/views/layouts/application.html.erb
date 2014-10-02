@@ -10,9 +10,28 @@
 </head>
 <body>
   <header>
-  </header>
+  	<h2>Top_Tomato</h2>The app that tells you the Movies you want to see
+	</header>
 
-<%= yield %>
+
+		<div id='top_menu'>
+			<div id='notice'>
+				<p class="notice"><%= notice %></p>
+		  	<p class="alert"><%= alert %></p>
+		  </div>
+			<nav id='sign'>
+				<ul>
+					<li><%= link_to "Sign in", new_user_session_path %></li>  
+					<li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+				</ul>
+			</nav>
+		</div>
+		<div>
+			
+			<%= yield %>
+		 
+		</div> 
+	</section>
 
 </body>
 </html>
