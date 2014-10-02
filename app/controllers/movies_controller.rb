@@ -4,7 +4,7 @@ class MoviesController < ApplicationController
 
 	def index
 	  @movies = Movie.all
-	  @top_movies = Movie.where("critics_score >= '90'").order('release_date DESC')
+	  @top_movies = Movie.where("critics_score >= '90'").order('release_date DESC').where(created_at: (Time.now - 7.day)..Time.now)
 	end
 
 	def new
@@ -37,7 +37,7 @@ class MoviesController < ApplicationController
 	private
 
 	def movie_params
-	  params.require(:collection).permit(:name)
+	  params.require(:movie).permit(:title, :critics_score, :release_date, :genre)
 	end
 
 end
