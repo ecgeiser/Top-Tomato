@@ -17,27 +17,33 @@ ActiveRecord::Schema.define(version: 20141002175145) do
   enable_extension "plpgsql"
 
   create_table "comments", force: true do |t|
-    t.string  "body"
-    t.integer "movie_id_id"
-    t.integer "user_id_id"
+    t.string   "body"
+    t.integer  "movie_id_id"
+    t.integer  "user_id_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "comments", ["movie_id_id"], name: "index_comments_on_movie_id_id", using: :btree
   add_index "comments", ["user_id_id"], name: "index_comments_on_user_id_id", using: :btree
 
   create_table "favorites", force: true do |t|
-    t.integer "user_id_id"
-    t.integer "movie_id_id"
+    t.integer  "user_id_id"
+    t.integer  "movie_id_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "favorites", ["movie_id_id"], name: "index_favorites_on_movie_id_id", using: :btree
   add_index "favorites", ["user_id_id"], name: "index_favorites_on_user_id_id", using: :btree
 
   create_table "movies", force: true do |t|
-    t.string  "title"
-    t.string  "genre"
-    t.integer "critics_score"
-    t.string  "release_date"
+    t.string   "title"
+    t.string   "genre"
+    t.integer  "critics_score"
+    t.string   "release_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
