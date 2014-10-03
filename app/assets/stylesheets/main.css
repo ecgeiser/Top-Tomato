@@ -25,3 +25,14 @@ h3{
 .m-font {
 	font-family: 'Gloria Hallelujah', cursive;
 }
+
+.button {
+	background: #B40404;
+}
+
+.button-group{
+}
+
+ul li{
+	list-style-type: none;
+}
