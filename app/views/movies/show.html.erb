@@ -1,0 +1,16 @@
+<div id='collect_list'>
+  <div class="row">
+    <div class="medium-6 columns">
+      <h3><%= @movie.title %></h3>
+      <ul>
+        <% if !@movie.genre = nil %>
+          <li><%=@movie.genre%></li>
+        <% end %>
+        <li><b>Critics Score</b>: <%=@movie.critics_score%></li>
+        <li><b>Release Date</b>: <%=@movie.release_date%></li>
+      </ul>
+    </div>
+    </div>
+  </div>
+  <%= link_to "Home", movies_path %>
+</div>
