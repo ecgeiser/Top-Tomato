@@ -4,7 +4,7 @@ class MoviesController < ApplicationController
 
 	def index
 	  @movies = Movie.order(:created_at)
-	  @favorites = Favorite.all
+	  @favorites = Favorite.where(user_id: current_user.id)
 	end
 
 	def new
