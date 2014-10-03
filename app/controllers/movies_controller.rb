@@ -3,8 +3,7 @@ class MoviesController < ApplicationController
 	before_action :authenticate_user!, except: [:show, :index]
 
 	def index
-	  @movies = Movie.all
-	  # @top_movies = Movie.where("critics_score >= '90'").order('release_date DESC').where(created_at: (Time.now - 7.day)..Time.now)
+	  @movies = Movie.order(:created_at)
 	end
 
 	def new
