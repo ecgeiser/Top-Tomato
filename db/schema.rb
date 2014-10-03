@@ -42,6 +42,8 @@ ActiveRecord::Schema.define(version: 20141002175145) do
     t.string   "genre"
     t.integer  "critics_score"
     t.string   "release_date"
+    t.string   "poster_url"
+    t.text     "synopsis"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
