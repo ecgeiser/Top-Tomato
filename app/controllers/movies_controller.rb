@@ -13,6 +13,7 @@ class MoviesController < ApplicationController
 
 	def show
 	  @movie = Movie.find(params[:id])
+	  @comment = Comment.new(:movie => @movie)
 	end
 
 	def edit
