@@ -27,10 +27,10 @@ namespace :scheduler do
         require 'rubygems'
         require 'twilio-ruby'
 
-        movies = Movie.pluck(:title, :release_date)
+        movies = Movie.where(:created_at < :one_week_ago, :one_week_ago => Time.now - 7.days)
         movies_str = ""
         movies.each do |movie|
-            movies_str += "#{movie[0]}: #{movie[1]}\n"
+            movies_str += "#{movie["title"]}: #{movie["release_date"]}\n"
         end
 
         @baseUrl = "http://www.fandango.com/"
