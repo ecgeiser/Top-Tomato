@@ -13,7 +13,7 @@
  *= require_self
  *= require foundation_and_overrides
  *= require google_font_righteous.css
- *= reuqire main.css
+ *= require main.css
  */
 
 html, body {
