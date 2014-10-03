@@ -4,6 +4,7 @@ class MoviesController < ApplicationController
 
 	def index
 	  @movies = Movie.order(:created_at)
+	  @favorites = Favorite.all
 	end
 
 	def new

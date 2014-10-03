@@ -40,7 +40,7 @@ namespace :scheduler do
             number = "+1#{user.cell}"
             zipcode = user.zip
 
-            text_body = "#{movies_str}\n#{@baseUrl}#{zipcode}_movietimes?q=#{zipcode}"
+            text_body = "#{movies_str}#{@baseUrl}#{zipcode}_movietimes?q=#{zipcode}"
         
             @client = Twilio::REST::Client.new ENV["twillio_sid"], ENV["twillio_token"]
            
