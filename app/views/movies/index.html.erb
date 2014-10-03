@@ -1,11 +1,16 @@
 <div id='collect_list'>
-	<p>Movie List</p>
+	<div class="row">
+		<div class="medium-6 columns">
+			<h3>Movie List</h3>
+		</div> 
+		<div class="medium-6 columns">
+			<h3>Release Date</h3>
+		</div>
+	</div>
 		<% @movies.each do |m| %>
-			<ul>
-				<li><%= m.title  %></li>
-				<li><%= m.release_date %></li>
-	
-
-			</ul>
+			<div class="row m-font">
+				<div class="medium-6 columns"><%= m.title  %></div>
+				<div class="medium-6 columns"><%= m.release_date %></div>
+			</div>
 		<% end %>
 </div>
