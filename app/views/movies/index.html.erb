@@ -9,7 +9,7 @@
 	</div>
 		<% @movies.each do |m| %>
 			<div class="row m-font">
-				<div class="medium-6 columns"><%= m.title  %></div>
+				<div class="medium-6 columns"><%= link_to m.title, movie_path(m) %></div>
 				<div class="medium-6 columns"><%= m.release_date %></div>
 			</div>
 		<% end %>
