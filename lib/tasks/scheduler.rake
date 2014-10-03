@@ -16,7 +16,9 @@ namespace :scheduler do
                 film = Movie.new(
         			:title => movie["title"],
         			:critics_score => movie["ratings"]["critics_score"],
-        			:release_date => movie["release_dates"]["theater"]
+        			:release_date => movie["release_dates"]["theater"],
+                    :poster_url => movie["posters"]["original"],
+                    :synopsis => movie["synopsis"]
         		)
                 film.save
         	end
