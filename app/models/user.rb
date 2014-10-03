@@ -7,8 +7,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
 
-  validates :cell, numericality: { only_integer: true }, length: { is:10 }, presence: true
-  validates :zip, numericality: { only_integer: true }, length: { is:5 }, presence: true
+  validates :cell, length: { is:10 }, presence: true
+  validates :zip, length: { is:5 }, presence: true
 
 
 end
