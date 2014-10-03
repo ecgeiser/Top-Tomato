@@ -14,15 +14,15 @@
 <body>
 
   <div class="row main">
-  	<div class="large-8 columns">
+  	<div class="medium-8 columns">
       <div class="row">
-        <div class="large-8 columns">
-			    <div class="large-6 columns"><h2>Top Tomato</h2></div>
-            <div class="large-6 columns logo"><%= image_tag "tomato.png"%></div>
+        <div class="medium-8 columns">
+			    <div class="medium-6 columns"><h2>Top Tomato</h2></div>
+            <div class="medium-6 columns logo"><%= image_tag "tomato.png"%></div>
             </div>
   		    </div>
   	    </div>
-		<div class="large-4 columns">
+		<div class="medium-4 columns">
 			<ul>
 				<div class="button-group">
           <% if !user_signed_in? %>
@@ -35,12 +35,11 @@
 			</ul>
 		</div>
 	</div>
-
-	<div>
 	
 	<%= yield %>
  
-	</div> 		
+	</div> 	
 
+  <div class="tomato-cut"></div>	
 </body>
 </html>

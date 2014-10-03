@@ -1,6 +1,6 @@
 <div id='collect_list'>
   <div class="row">
-    <div class="medium-6 columns">
+    <div class="medium-8 columns">
       <h3><%= @movie.title %></h3>
       <ul>
         <% if !@movie.genre = nil %>
@@ -9,10 +9,11 @@
         <li><b>Critics Score</b>: <%=@movie.critics_score%></li>
         <li><b>Release Date</b>: <%=@movie.release_date%></li>
         <li><b>Synopsis</b>: <%=@movie.synopsis %></li>
-
       </ul>
     </div>
+    <div class="medium-4 columns">
+      <img src="<%=@movie.poster_url %>" height=40% width=40%>
     </div>
   </div>
-  <%= link_to "Home", movies_path %>
+  <div class="row foot"><%= link_to "Home", movies_path %></div>
 </div>
